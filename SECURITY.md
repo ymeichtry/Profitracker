@@ -6,4 +6,4 @@ I will investigate all legitimate reports and do my best to fix the problem quic
 
 Email yanis@meichtry.dev to disclose any security vulnerabilities.
 
-[https://vercel.com/security](https://yanis.meichtry.dev/)
+[https://yanis.meichtry.dev](https://yanis.meichtry.dev/)
