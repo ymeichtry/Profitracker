@@ -7,8 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @CrossOrigin
-@RequestMapping(api/v1/employee)
-
+@RequestMapping("api/v1/employee")
 public class EmployeeController {
 
     @Autowired
@@ -20,7 +19,5 @@ public class EmployeeController {
         String id = employeeService.addEmployee(employeeDTO);
         return id;
     }
-
-
 
 }
