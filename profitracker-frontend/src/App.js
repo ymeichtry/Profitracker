@@ -1,23 +1,22 @@
-import './App.css';
-import { Link, Route, Switch } from "wouter";
-import LoginPage from './components/login/LoginPage';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import RegisterComponent from './components/RegisterComponent';
+import LoginComponent from './components/LoginComponent';
+import DashboardComponent from './components/DashboardComponent';
 
-const App = () => (
-  <>
-    <Link href="/users/1">Profile</Link>
-
-    <Route path="/about">About Us</Route>
-
-    <Switch>
-      <Route path="/login" component={LoginPage} />
-
-      <Route path="/users/:name">
-        {(params) => <>Hello, {params.name}!</>}
-      </Route>
-
-      <Route>404: No such page!</Route>
-    </Switch>
-  </>
-);
+const App = () => {
+    return (
+        <Router>
+            <div className="container">
+                <Routes>
+                    <Route path="/" element={<LoginComponent />} />
+                    <Route path="/register" element={<RegisterComponent />} />
+                    <Route path="/login" element={<LoginComponent />} />
+                    <Route path="/dashboard" element={<DashboardComponent />} />
+                </Routes>
+            </div>
+        </Router>
+    );
+};
 
 export default App;
